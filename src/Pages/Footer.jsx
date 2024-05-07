@@ -21,7 +21,7 @@ const Footer = () => {
 							<ul class="text-gray-400 dark:text-gray-400 font-medium">
 								<li class="mb-2">
 									<a href="https://www.instagram.com/pikrievelyn/?hl=id" class="hover:underline">
-										san(Rawzn)
+										SAN
 									</a>
 								</li>
 							</ul>
