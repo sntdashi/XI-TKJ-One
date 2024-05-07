@@ -8,7 +8,7 @@ const Home = () => {
 		<div className="text-white px-[10%]" id="Home">
 			<Navbar />
 			<div className="lg:hidden">
-				<div className="font-bold text-5xl text-center py-20 ">XI TKJ 3</div>
+				<div className="font-bold text-5xl text-center py-20 ">XI TKJ 1</div>
 				<div
 					className="border-2 flex justify-between px-10 text-4xl font-bold py-2 relative"
 					id="TotalSiswa">

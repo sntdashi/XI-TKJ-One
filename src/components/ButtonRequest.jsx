@@ -102,7 +102,7 @@ export default function ButtonRequest() {
 									.reverse()}
 							</div>
 							<div className="text-white text-[0.7rem] mt-5">
-								Note : Jika tidak ada gambar yang sudah anda upload silahkan reload
+								Note : Gambar Yang Di Request akan tambil Di Class Galery Jika di acc admin.
 							</div>
 						</Typography>
 					</Box>
