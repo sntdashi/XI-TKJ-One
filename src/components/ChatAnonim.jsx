@@ -186,7 +186,7 @@ function Chat() {
       <div className="mt-5" id="KotakPesan" style={{ overflowY: "auto" }}>
         {messages.map((msg, index) => (
           <div key={index} className="flex items-start text-sm py-[1%]">
-            <img src={msg.sender.image} alt="User Profile" className="h-7 w-7 mr-2 rounded-circle" />
+            <img src={msg.sender.image} alt="User Profile" className="h-7 w-7 mr-2 border-radius: 50%" />
             <div className="relative top-[0.30rem]">{msg.message}</div>
           </div>
         ))}
