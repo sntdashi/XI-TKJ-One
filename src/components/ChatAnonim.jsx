@@ -137,7 +137,7 @@ function Chat() {
       const trimmedMessage = message.trim().substring(0, 60);
       const userIpAddress = userIp;
 
-      if (messageCount >= 20) { // Batasan pesan per hari (20 pesan)
+      if (messageCount >= 100) { // Batasan pesan per hari (20 pesan)
         Swal.fire({
           icon: "error",
           title: "Message limit exceeded",
@@ -186,7 +186,7 @@ function Chat() {
       <div className="mt-5" id="KotakPesan" style={{ overflowY: "auto" }}>
         {messages.map((msg, index) => (
           <div key={index} className="flex items-start text-sm py-[1%]">
-            <img src={msg.sender.image} alt="User Profile" className="h-7 w-7 mr-2 " />
+            <img src={msg.sender.image} alt="User Profile" className="h-7 w-7 mr-2 rounded-circle" />
             <div className="relative top-[0.30rem]">{msg.message}</div>
           </div>
         ))}
