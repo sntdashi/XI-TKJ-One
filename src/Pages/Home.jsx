@@ -8,23 +8,20 @@ const Home = () => {
 		<div className="text-white px-[10%]" id="Home">
 			<Navbar />
 			<div className="lg:hidden">
-				<div className="font-bold text-5xl text-center py-20 ">XI TKJ 1</div>
+				<div className="font-bold text-5xl text-center py-20 ">XI TKJ ONE</div>
 				<div
 					className="border-2 flex justify-between px-10 text-4xl font-bold py-2 relative"
 					id="TotalSiswa">
 					<div id="AngkaGradientBlue" className="flex items-center justify-center ">
-						25
+						11
 					</div>
 					<div className="">
-						<span id="AngkaGradientBlue" className="text-5xl">
-							3
-						</span>
-						<span id="AngkaGradientPink" className="text-5xl">
-							7
+						<span id="AngkaGradientBlue" className="text-4xl">
+							TKJ
 						</span>
 					</div>
 					<div id="AngkaGradientPink" className="flex items-center justify-center">
-						12
+						ONE
 					</div>
 				</div>
 

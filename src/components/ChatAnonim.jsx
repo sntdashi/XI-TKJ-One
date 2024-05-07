@@ -199,7 +199,7 @@ function Chat() {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           onKeyPress={handleKeyPress}
-          placeholder="Ketik pesan Anda..."
+          placeholder="Don't Spaming!..."
           maxLength={60}
         />
         <button onClick={sendMessage} className="ml-2">
