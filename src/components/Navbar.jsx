@@ -75,11 +75,6 @@ const Navbar = () => {
 							Gallery
 						</a>
 					</li>
-					<li>
-						<a href="#Tabs" className="text-white opacity-80 text-[1rem] font-semibold">
-							Structure & Schedule
-						</a>
-					</li>
 				</ul>
 			</div>
 		</>
