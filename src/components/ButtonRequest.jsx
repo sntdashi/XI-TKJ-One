@@ -102,7 +102,7 @@ export default function ButtonRequest() {
 									.reverse()}
 							</div>
 							<div className="text-white text-[0.7rem] mt-5">
-								Note : no distrub pict!.
+								Note : no distrubing/18+ pict!.
 							</div>
 						</Typography>
 					</Box>
