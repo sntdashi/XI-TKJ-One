@@ -13,6 +13,7 @@ const firebaseConfig = {
   storageBucket: "xii-tkj-one.appspot.com",
   messagingSenderId: "301795205174",
   appId: "1:301795205174:web:e67d56eb0a8434747fb897",
+  measurementId: "G-13MNVSD9RX"
   
 };
 
