@@ -50,11 +50,6 @@ const Navbar = () => {
 								Structure & Schedule
 							</a>
 						</li>
-						<li className="mb-4">
-							<a href="https://bit.ly/ABSENSI_XI_GENAP2324" className="text-white opacity-80 text-lg font-bold">
-								Absen Online
-							</a>
-						</li>
 					</ul>
 				</div>
 			</div>
@@ -79,11 +74,6 @@ const Navbar = () => {
 						<a href="#Tabs" className="text-white opacity-80 text-[1rem] font-semibold">
 							Structure & Schedule
 						</a>
-						<li className="mb-4">
-							<a href="https://bit.ly/ABSENSI_XI_GENAP2324" className="text-white opacity-80 text-lg font-bold">
-								Absen Online
-							</a>
-						</li>
 					</li>
 				</ul>
 			</div>
