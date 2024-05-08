@@ -266,7 +266,9 @@ const StrukturKelas = () => {
 					</div>
 
 					<div className="flex-col">
-						<BorderStruktur Jabatan="Motivator" Nama="Rauzan" Width="120px" />
+						<BorderStruktur Jabatan="Motivator" Nama="Rauzan" Width="120px" /> <a href="https://www.youtube.com/@smkmlacirebon/" class="hover:underline">
+										p
+									</a>
 					</div>
 				</div>
 
