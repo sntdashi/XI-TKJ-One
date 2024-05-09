@@ -16,7 +16,7 @@ const Home = () => {
 						
 					</div>
 					<div className="">
-						<span id="AngkaGradientBlue" className="text-1xl">
+						<span id="AngkaGradientBlue" className="text-5xl">
 							@sebelastkjsatuu
 						</span>
 					</div>
@@ -44,7 +44,7 @@ const Home = () => {
 						WELCOME
 					</h1>
 					<h6 className="text-sm" style={{ letterSpacing: "5px" }}>
-						TO XI TKJ 1
+						TO XI TKJ ONE
 					</h6>
 				</div>
 			</div>
