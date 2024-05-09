@@ -16,7 +16,7 @@ const Home = () => {
 						
 					</div>
 					<div className="">
-						<span id="AngkaGradientBlue" className="text-4xl">
+						<span id="AngkaGradientBlue" className="text-1xl">
 							@sebelastkjsatuu
 						</span>
 					</div>
