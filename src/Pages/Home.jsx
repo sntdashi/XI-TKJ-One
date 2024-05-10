@@ -17,7 +17,7 @@ const Home = () => {
 					</div>
 					<div className="">
 						<span id="AngkaGradientBlue" className="text-4xl">
-						KILL ALL
+						43
 						</span>
 					</div>
 					<div id="AngkaGradientPink" className="flex items-center justify-center">

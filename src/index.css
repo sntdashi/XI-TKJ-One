@@ -245,6 +245,21 @@ body {
 		0 0 15px rgba(255, 255, 255, 0.5);
 }
 
+#ButtonLemari {
+    /* Gaya tombol Lemari */
+    background-color: var(--primary-color); /* Warna latar belakang */
+    color: white; /* Warna teks */
+    padding: 10px 20px; /* Padding (atas/bawah, kiri/kanan) */
+    border-radius: 5px; /* Border radius */
+    cursor: pointer; /* Ubah kursor saat diarahkan ke tombol */
+    transition: background-color 0.3s ease; /* Transisi perubahan warna latar belakang */
+    font-family: "Poppins", sans-serif; /* Font family */
+}
+
+#ButtonLemari:hover {
+    background-color: var(--secondary-color); /* Warna latar belakang saat dihover */
+}
+
 #SendImg,
 #SendRequest {
 	text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5),
