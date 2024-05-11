@@ -193,6 +193,11 @@ body {
 	border: 1px solid rgba(255, 255, 255, 0.09);
 }
 
+#ButtonLemariNav {
+	height: fit-content;
+	margin-top: -14%;
+}
+
 #BoxClassIg Img {
 	filter: brightness(0) invert(1);
 }

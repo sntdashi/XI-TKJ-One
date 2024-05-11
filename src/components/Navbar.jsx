@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import ButtonLemariNav from "./ButtonLemariNav"
 
 const Navbar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -44,7 +45,8 @@ const Navbar = () => {
 						<a href="https://bit.ly/ABSENSI_XI_GENAP2324" className="text-white opacity-80 text-lg font-bold">
 							Absen
 						</a>
-					</li>
+						</li>
+						
 						<li className="mb-4">
 							<a href="#Gallery" className="text-white opacity-80 text-lg font-bold">
 								Gallery
@@ -85,6 +87,11 @@ const Navbar = () => {
 							Structure & Schedule
 						</a>
 					</li>
+					<li className="mb-4">
+					<a className="text-white opacity-80 text-[1rem] font-semibold">
+							<ButtonLemariNav />
+						</a>
+						</li>
 				</ul>
 			</div>
 		</>
