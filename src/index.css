@@ -159,44 +159,6 @@ body {
 	filter: brightness(0) invert(1);
 }
 
-#BoxLemari {
-	padding: 10%;
-	height: auto;
-	width: 100%;
-	margin-top: 5%;
-	border-radius: 15pt;
-	/* From https://css.glass */
-	background: rgba(255, 255, 255, 0.14);
-	border-radius: 16px;
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-	backdrop-filter: blur(6.9px);
-	-webkit-backdrop-filter: blur(6.9px);
-	border: 1px solid rgba(255, 255, 255, 0.09);
-}
-
-#BoxHome Img {
-	filter: brightness(0) invert(1);
-}
-
-#BoxHome {
-	padding: 10%;
-	height: auto;
-	width: 100%;
-	margin-top: 5%;
-	border-radius: 15pt;
-	/* From https://css.glass */
-	background: rgba(255, 255, 255, 0.14);
-	border-radius: 16px;
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-	backdrop-filter: blur(6.9px);
-	-webkit-backdrop-filter: blur(6.9px);
-	border: 1px solid rgba(255, 255, 255, 0.09);
-}
-
-#BoxLemari Img {
-	filter: brightness(0) invert(1);
-}
-
 #BoxTextAnonim {
 	padding: 10%;
 	height: auto;
@@ -282,38 +244,6 @@ body {
 	text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5),
 		0 0 15px rgba(255, 255, 255, 0.5);
 }
-
-#ButtonLemari {
-    /* Gaya tombol Lemari */
-    background-color: var(--primary-color); /* Warna latar belakang */
-    color: white; /* Warna teks */
-    padding: 10px 20px; /* Padding (atas/bawah, kiri/kanan) */
-    border-radius: 5px; /* Border radius */
-    cursor: pointer; /* Ubah kursor saat diarahkan ke tombol */
-    transition: background-color 0.3s ease; /* Transisi perubahan warna latar belakang */
-    font-family: "Poppins", sans-serif; /* Font family */
-}
-
-#ButtonLemari:hover {
-    background-color: var(--secondary-color); /* Warna latar belakang saat dihover */
-}
-
-.button-lemari {
-	/* Gaya tombol Lemari */
-	background-color: var(--primary-color); /* Warna latar belakang */
-	color: white; /* Warna teks */
-	padding: 10px 20px; /* Padding (atas/bawah, kiri/kanan) */
-	border: none; /* Hapus border */
-	border-radius: 5px; /* Border radius */
-	cursor: pointer; /* Ubah kursor saat diarahkan ke tombol */
-	transition: background-color 0.3s ease; /* Transisi perubahan warna latar belakang */
-	font-family: "Poppins", sans-serif; /* Font family */
-  }
-  
-  .button-lemari:hover {
-	background-color: var(--secondary-color); /* Warna latar belakang saat dihover */
-  }
-
   
 #SendImg,
 #SendRequest {
@@ -357,6 +287,23 @@ body {
 	text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5),
 		0 0 15px rgba(255, 255, 255, 0.5);
 }
+
+.button-lemari {
+    /* Gaya tombol Lemari */
+    background-color: var(--primary-color); /* Warna latar belakang */
+    color: white; /* Warna teks */
+    padding: 10px 20px; /* Padding (atas/bawah, kiri/kanan) */
+    border: none; /* Hapus border */
+    border-radius: 5px; /* Border radius */
+    cursor: pointer; /* Ubah kursor saat diarahkan ke tombol */
+    transition: background-color 0.3s ease; /* Transisi perubahan warna latar belakang */
+    font-family: "Poppins", sans-serif; /* Font family */
+}
+
+.button-lemari:hover {
+    background-color: var(--secondary-color); /* Warna latar belakang saat dihover */
+}
+
 
 #UserButton {
 	background: rgba(255, 255, 255, 0.14);

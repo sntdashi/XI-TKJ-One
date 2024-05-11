@@ -9,6 +9,7 @@ import Modal from "@mui/material/Modal"
 import { Box, IconButton } from "@mui/material"
 import CloseIcon from "@mui/icons-material/Close"
 import { useSpring, animated } from "@react-spring/web" // Import the necessary components
+import ButtonLemari from "../components/ButtonLemari"
 
 const Carousel = () => {
 	const [images, setImages] = useState([])
@@ -109,6 +110,7 @@ const Carousel = () => {
 			<div className="flex justify-center items-center gap-6 text-base mt-5 lg:mt-8">
 				<ButtonSend />
 				<ButtonRequest />
+				<ButtonLemari />
 			</div>
 
 			<Modal
