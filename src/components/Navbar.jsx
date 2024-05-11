@@ -41,6 +41,11 @@ const Navbar = () => {
 							</a>
 						</li>
 						<li className="mb-4">
+						<a href="https://bit.ly/ABSENSI_XI_GENAP2324" className="text-white opacity-80 text-lg font-bold">
+							Absen
+						</a>
+					</li>
+						<li className="mb-4">
 							<a href="#Gallery" className="text-white opacity-80 text-lg font-bold">
 								Gallery
 							</a>
@@ -63,6 +68,11 @@ const Navbar = () => {
 					<li className="mb-4">
 						<a href="#" className="text-white opacity-80 text-[1rem] font-semibold">
 							Home
+						</a>
+					</li>
+					<li className="mb-4">
+						<a href="https://bit.ly/ABSENSI_XI_GENAP2324" className="text-white opacity-80 text-[1rem] font-semibold">
+							Absen
 						</a>
 					</li>
 					<li className="mb-4">
