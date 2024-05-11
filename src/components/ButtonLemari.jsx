@@ -77,7 +77,7 @@ export default function ButtonLemari() {
 
     return (
         <div>
-            <button onClick={handleOpen} className="flex items-center space-x-2 text-white px-6 py-4" id="SendRequest">
+            <button onClick={handleOpen} className="flex items-center space-x-2 text-white px-6 py-4" id="ButtonLemari">
                 <img src="/Folder.png" alt="Icon" className="w-6 h-6 relative bottom-1" />
                 <span className="text-base lg:text-1xl">Lemari</span>
             </button>
