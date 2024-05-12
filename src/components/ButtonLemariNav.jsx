@@ -5,10 +5,12 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Typography from "@mui/material/Typography";
 import CloseIcon from "@mui/icons-material/Close";
-import { getStorage, ref, listAll, getDownloadURL, getMetadata, uploadBytes } from "firebase/storage";
+import LinearProgress from "@mui/material/LinearProgress"; // Import LinearProgress dari Material-UI
+import { getStorage, ref, listAll, getDownloadURL, getMetadata, uploadBytesResumable } from "firebase/storage";
 
 export default function ButtonLemari() {
     const [open, setOpen] = useState(false);
+    const [uploadProgress, setUploadProgress] = useState(0); // State untuk melacak kemajuan unggah
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
@@ -66,18 +68,29 @@ export default function ButtonLemari() {
         const storage = getStorage();
         const storageRef = ref(storage, `Lemari/${newFile.name}`);
 
-        uploadBytes(storageRef, newFile).then(() => {
-            console.log("File berhasil diunggah");
-            fetchFilesFromFirebase();
-            setNewFile(null);
-        }).catch((error) => {
-            console.error("Error saat mengunggah file:", error);
-        });
+        const uploadTask = uploadBytesResumable(storageRef, newFile);
+
+        uploadTask.on(
+            "state_changed",
+            (snapshot) => {
+                const progress = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
+                setUploadProgress(progress);
+            },
+            (error) => {
+                console.error("Error saat mengunggah file:", error);
+            },
+            () => {
+                console.log("File berhasil diunggah");
+                fetchFilesFromFirebase();
+                setNewFile(null);
+                setUploadProgress(0);
+            }
+        );
     };
 
     return (
         <div>
-            <button onClick={handleOpen} className="flex items-center space-x-2 text-white px-6 py-4" id="ButtonLemariNav">
+            <button onClick={handleOpen} className="text-white opacity-95 text-[1rem] font-semibold" id="ButtonLemariNav">
                 <span className="text-base lg:text-1xl">Lemari</span>
             </button>
 
@@ -111,6 +124,8 @@ export default function ButtonLemari() {
                                     Unggah File
                                 </button>
                             </div>
+                            {/* Tampilkan progress bar saat sedang mengunggah */}
+                            {uploadProgress > 0 && <LinearProgress variant="determinate" value={uploadProgress} />}
                         </Typography>
                     </Box>
                 </animated.div>

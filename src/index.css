@@ -195,7 +195,8 @@ body {
 
 #ButtonLemariNav {
 	height: fit-content;
-	margin-top: -14%;
+	margin-top: -15%;
+	position: relative;
 }
 
 #BoxClassIg Img {

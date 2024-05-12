@@ -73,6 +73,11 @@ const Navbar = () => {
 						</a>
 					</li>
 					<li className="mb-4">
+						<a className="text-white opacity-80 text-[1rem] font-semibold">
+							<ButtonLemariNav />
+							</a>
+						</li>
+					<li className="mb-4">
 						<a href="https://bit.ly/ABSENSI_XI_GENAP2324" className="text-white opacity-80 text-[1rem] font-semibold">
 							Absen
 						</a>
@@ -87,11 +92,6 @@ const Navbar = () => {
 							Structure & Schedule
 						</a>
 					</li>
-					<li className="mb-4">
-					<a className="text-white opacity-80 text-[1rem] font-semibold">
-							<ButtonLemariNav />
-						</a>
-						</li>
 				</ul>
 			</div>
 		</>
