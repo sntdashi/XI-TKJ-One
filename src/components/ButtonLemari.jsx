@@ -39,7 +39,7 @@ export default function ButtonLemari() {
                 return {
                     url,
                     name: metadata.name,
-                    timestamp: metadata.timeCreated,
+                    size: metadata.size, // Tambahkan ukuran file
                 };
             });
 
@@ -115,7 +115,7 @@ export default function ButtonLemari() {
                                 {files.map((file, index) => (
                                     <div key={index} className="flex justify-between items-center px-5 py-2 mt-2" id="LayoutIsiButtonRequest">
                                         <a href={file.url} target="_blank" rel="noreferrer" className="text-white">{file.name}</a>
-                                        <span className="ml-2 text-white">{new Date(file.timestamp).toLocaleString()}</span>
+                                        <span className="ml-2 text-white">{formatBytes(file.size)}</span> {/* Tampilkan ukuran file */}
                                     </div>
                                 ))}
                             </div>
@@ -133,4 +133,16 @@ export default function ButtonLemari() {
             </Modal>
         </div>
     );
+}
+
+function formatBytes(bytes, decimals = 2) {
+    if (bytes === 0) return '0 Bytes';
+
+    const k = 1024;
+    const dm = decimals < 0 ? 0 : decimals;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
 }
