@@ -11,8 +11,13 @@ import { getStorage, ref, listAll, getDownloadURL, getMetadata, uploadBytesResum
 export default function ButtonLemari() {
     const [open, setOpen] = useState(false);
     const [uploadProgress, setUploadProgress] = useState(0); // State untuk melacak kemajuan unggah
+    const [uploadSuccess, setUploadSuccess] = useState(false); // State untuk menampilkan pesan sukses
     const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+    const handleClose = () => {
+        setOpen(false);
+        // Setelah menutup modal, reset pesan sukses
+        setUploadSuccess(false);
+    };
 
     const fade = useSpring({
         opacity: open ? 1 : 0,
@@ -80,7 +85,8 @@ export default function ButtonLemari() {
                 console.error("Error saat mengunggah file:", error);
             },
             () => {
-                console.log("File berhasil diunggah");
+                // Setelah berhasil diunggah, atur state untuk menampilkan pesan sukses
+                setUploadSuccess(true);
                 fetchFilesFromFirebase();
                 setNewFile(null);
                 setUploadProgress(0);
@@ -124,8 +130,14 @@ export default function ButtonLemari() {
                                     Unggah File
                                 </button>
                             </div>
+                            {/* Tampilkan pesan sukses jika file berhasil diunggah */}
+                            {uploadSuccess && (
+                                <Typography variant="subtitle1" className="text-green-500 mt-2">
+                                    File berhasil diunggah!
+                                </Typography>
+                            )}
                             {/* Tampilkan progress bar saat sedang mengunggah */}
-                            {uploadProgress > 0 && <LinearProgress variant="determinate" value={uploadProgress} />}
+                            {uploadProgress > 0 && <LinearProgress variant="buffer" value={uploadProgress} />}
                         </Typography>
                     </Box>
                 </animated.div>
