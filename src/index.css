@@ -81,9 +81,17 @@ body {
 		),
 		url("/Background.jpeg");
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover; /* Atau gunakan 'contain' sesuai kebutuhan */
 	background-position: center;
 	z-index: 10;
+}
+
+/* Contoh penggunaan media queries untuk desktop */
+@media (min-width: 768px) {
+  #Home {
+    max-width: 1200px; /* Contoh batasan lebar untuk desktop */
+    margin: 0 auto; /* Pusatkan konten di tengah */
+  }
 }
 
 #Home::after {
