@@ -231,15 +231,25 @@ body {
 }
 
 #TotalSiswa {
-	width: 100%;
-	margin: 0 auto;
-	margin-bottom: 8%;
+	width: 90%; /* Menggunakan persentase untuk responsivitas */
+	max-width: 600px; /* Contoh batasan lebar maksimum */
+	margin: 0 auto; /* Pusatkan elemen di tengah */
+	margin-bottom: 8%; /* Gunakan persentase untuk margin bawah */
 	background: rgba(255, 255, 255, 0.14);
 	border-radius: 25pt;
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 	backdrop-filter: blur(6.9px);
 	-webkit-backdrop-filter: blur(6.9px);
 	border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+/* Contoh media query untuk responsif */
+@media (max-width: 768px) {
+  #TotalSiswa {
+    width: 95%; /* Mengubah lebar pada layar lebih kecil */
+    max-width: none; /* Menghilangkan batasan lebar maksimum */
+    margin-bottom: 5%; /* Menyesuaikan margin bawah */
+  }
 }
 
 #AngkaGradientBlue {
