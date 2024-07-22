@@ -24,10 +24,8 @@ const Home = () => {
 					<div id="AngkaGradientPink" className="flex items-center justify-center">
 						ONE
 					</div>
-					<div className="">
-						<span id="AngkaGradientBlue" className="text-4xl">
+					<div id="AngkaGradientBlue" className="flex items-center justify-center">
 						NEVER DIE
-						</span>
 					</div>
 				</div>
 
