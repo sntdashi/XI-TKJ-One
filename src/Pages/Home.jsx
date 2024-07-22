@@ -10,7 +10,7 @@ const Home = () => {
 			<Navbar />
 			<div className="lg:hidden">
 				<div className="font-bold text-5xl text-center py-20 ">XII TKJ ONE</div>
-				<div className="font-bold text-3xl text-center py-20 ">NEVER DIE</div>
+				<div className="font-bold text-5xl text-center py-20 ">NEVER DIE</div>
 				<div
 				
 					className="border-2 flex justify-between px-10 text-4xl font-bold py-2 relative"
