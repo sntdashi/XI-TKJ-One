@@ -89,7 +89,7 @@ body {
 /* Contoh penggunaan media queries untuk desktop */
 @media (min-width: 768px) {
   #Home {
-    max-width: 1200px; /* Contoh batasan lebar untuk desktop */
+    max-width: 1500px; /* Contoh batasan lebar untuk desktop */
     margin: 0 auto; /* Pusatkan konten di tengah */
   }
 }
