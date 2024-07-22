@@ -10,9 +10,7 @@ const Home = () => {
 			<Navbar />
 			<div className="lg:hidden">
 				<div className="font-bold text-5xl text-center py-20 ">XII TKJ ONE</div>
-				<div className="font-bold text-5xl text-center py-20 ">NEVER DIE</div>
 				<div
-				
 					className="border-2 flex justify-between px-10 text-4xl font-bold py-2 relative"
 					id="TotalSiswa">
 					<div id="AngkaGradientBlue" className="flex items-center justify-center ">
@@ -25,6 +23,11 @@ const Home = () => {
 					</div>
 					<div id="AngkaGradientPink" className="flex items-center justify-center">
 						ONE
+					</div>
+					<div className="">
+						<span id="AngkaGradientBlue" className="text-4xl">
+						NEVER DIE
+						</span>
 					</div>
 				</div>
 
