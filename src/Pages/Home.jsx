@@ -10,21 +10,19 @@ const Home = () => {
 			<Navbar />
 			<div className="lg:hidden">
 				<div className="font-bold text-5xl text-center py-20 ">XII TKJ ONE</div>
-				<div
-					className="border-2 flex justify-between px-10 text-4xl font-bold py-2 relative"
-					id="TotalSiswa">
-					<div id="AngkaGradientBlue" className="flex items-center justify-center ">
-						43
-					</div>
-					<div className="">
-						<span id="AngkaGradientBlue" className="text-4xl">
-						Siswa
-						</span>
-					</div>
-					<div id="AngkaGradientPink" className="flex items-center justify-center">
-						XII TKJ 1
-					</div>
-				</div>
+					<div className="border-2 flex justify-between px-4 md:px-10 text-2xl md:text-4xl font-bold py-2 relative">
+						<div id="AngkaGradientBlue" className="flex items-center justify-center text-center md:text-left w-1/3 md:w-auto">
+							43
+						</div>
+							<div className="text-center md:text-left w-1/3 md:w-auto">
+							<span id="AngkaGradientBlue" className="text-2xl md:text-4xl">
+								Siswa
+							</span>
+							</div>
+								<div id="AngkaGradientPink" className="flex items-center justify-center text-center md:text-right w-1/3 md:w-auto">
+									XII TKJ 1
+								</div>
+							</div>
 
 				<div className="grid grid-cols-2 md:grid-cols-2 gap-7 md:gap-5">
 					<div className="grid gap-2 md:gap-0 md:grid-cols-1">
