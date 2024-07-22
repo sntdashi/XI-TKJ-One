@@ -230,6 +230,16 @@ body {
 	filter: brightness(0) invert(1);
 }
 
+.border-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Untuk mengatur agar konten berada di tengah vertikal */
+}
+
+.flex > div {
+    margin-bottom: 10px; /* Jarak vertikal antara setiap elemen */
+}
+
 #TotalSiswa {
 	width: 90%; /* Menggunakan persentase untuk responsivitas */
 	max-width: 600px; /* Contoh batasan lebar maksimum */
