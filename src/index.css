@@ -82,7 +82,7 @@ body {
 		url("/Background.jpeg");
 	background-repeat: no-repeat;
 	background-size: contain;
-	background-position: top;
+	background-position: center;
 	z-index: 10;
 }
 
