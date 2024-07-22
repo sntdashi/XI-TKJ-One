@@ -22,7 +22,7 @@ const Home = () => {
 						</span>
 					</div>
 					<div id="AngkaGradientPink" className="flex items-center justify-center">
-						Siswi
+						XII TKJ 1
 					</div>
 				</div>
 
