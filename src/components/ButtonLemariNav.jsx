@@ -6,21 +6,22 @@ import Modal from "@mui/material/Modal";
 import Typography from "@mui/material/Typography";
 import CloseIcon from "@mui/icons-material/Close";
 import LinearProgress from "@mui/material/LinearProgress"; // Import LinearProgress dari Material-UI
-import { getStorage, ref, listAll, getDownloadURL, getMetadata, uploadBytesResumable } from "firebase/storage";
+import { getStorage, ref, listAll, getDownloadURL, getMetadata, uploadBytesResumable, createFolder } from "firebase/storage"; // Tambahkan createFolder dari firebase storage
 
 export default function ButtonLemari() {
     const [open, setOpen] = useState(false);
     const [uploadProgress, setUploadProgress] = useState(0); // State untuk melacak kemajuan unggah
     const [uploadSuccess, setUploadSuccess] = useState(false); // State untuk menampilkan pesan sukses
     const [currentFolder, setCurrentFolder] = useState("Lemari"); // State untuk menyimpan nama folder yang sedang dibuka
-    const [files, setFiles] = useState([]);
     const [newFile, setNewFile] = useState(null);
+    const [newFolderName, setNewFolderName] = useState(""); // State untuk menyimpan nama folder baru
 
     const handleOpen = () => setOpen(true);
     const handleClose = () => {
         setOpen(false);
         // Setelah menutup modal, reset pesan sukses
         setUploadSuccess(false);
+        setNewFolderName(""); // Reset input nama folder baru
     };
 
     const fade = useSpring({
@@ -99,6 +100,20 @@ export default function ButtonLemari() {
         setCurrentFolder(folderName);
     };
 
+    const handleCreateFolder = async () => {
+        if (!newFolderName.trim()) return;
+
+        try {
+            const storage = getStorage();
+            const folderRef = ref(storage, currentFolder + '/' + newFolderName);
+            await createFolder(folderRef);
+            fetchFilesFromFirebase(currentFolder); // Muat ulang file setelah membuat folder baru
+            setNewFolderName(""); // Reset input nama folder baru
+        } catch (error) {
+            console.error("Error creating folder:", error);
+        }
+    };
+
     return (
         <div>
             <button onClick={handleOpen} className="text-white opacity-95 text-[1rem] font-semibold" id="ButtonLemariNav">
@@ -143,6 +158,20 @@ export default function ButtonLemari() {
                             )}
                             {/* Tampilkan progress bar saat sedang mengunggah */}
                             {uploadProgress > 0 && <LinearProgress variant="buffer" value={uploadProgress} />}
+
+                            {/* Input untuk membuat folder baru */}
+                            <div className="mt-4">
+                                <input
+                                    type="text"
+                                    value={newFolderName}
+                                    onChange={(e) => setNewFolderName(e.target.value)}
+                                    placeholder="Nama Folder Baru"
+                                    className="border rounded px-2 py-1 mr-2"
+                                />
+                                <button onClick={handleCreateFolder} className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                                    Buat Folder
+                                </button>
+                            </div>
                         </Typography>
                     </Box>
                 </animated.div>
