@@ -12,6 +12,10 @@ export default function ButtonLemari() {
     const [open, setOpen] = useState(false);
     const [uploadProgress, setUploadProgress] = useState(0); // State untuk melacak kemajuan unggah
     const [uploadSuccess, setUploadSuccess] = useState(false); // State untuk menampilkan pesan sukses
+    const [currentFolder, setCurrentFolder] = useState("Lemari"); // State untuk menyimpan nama folder yang sedang dibuka
+    const [files, setFiles] = useState([]);
+    const [newFile, setNewFile] = useState(null);
+
     const handleOpen = () => setOpen(true);
     const handleClose = () => {
         setOpen(false);
@@ -26,14 +30,11 @@ export default function ButtonLemari() {
         },
     });
 
-    const [files, setFiles] = useState([]);
-    const [newFile, setNewFile] = useState(null);
-
     // Fungsi untuk mengambil daftar file dari Firebase Storage
-    const fetchFilesFromFirebase = async () => {
+    const fetchFilesFromFirebase = async (folder) => {
         try {
             const storage = getStorage();
-            const storageRef = ref(storage, "Lemari/");
+            const storageRef = ref(storage, folder + '/');
 
             const filesList = await listAll(storageRef);
 
@@ -60,8 +61,8 @@ export default function ButtonLemari() {
     };
 
     useEffect(() => {
-        fetchFilesFromFirebase();
-    }, []);
+        fetchFilesFromFirebase(currentFolder);
+    }, [currentFolder]);
 
     const handleFileChange = (event) => {
         setNewFile(event.target.files[0]);
@@ -71,7 +72,7 @@ export default function ButtonLemari() {
         if (!newFile) return;
 
         const storage = getStorage();
-        const storageRef = ref(storage, `Lemari/${newFile.name}`);
+        const storageRef = ref(storage, `${currentFolder}/${newFile.name}`);
 
         const uploadTask = uploadBytesResumable(storageRef, newFile);
 
@@ -87,11 +88,15 @@ export default function ButtonLemari() {
             () => {
                 // Setelah berhasil diunggah, atur state untuk menampilkan pesan sukses
                 setUploadSuccess(true);
-                fetchFilesFromFirebase();
+                fetchFilesFromFirebase(currentFolder);
                 setNewFile(null);
                 setUploadProgress(0);
             }
         );
+    };
+
+    const handleFolderClick = (folderName) => {
+        setCurrentFolder(folderName);
     };
 
     return (
@@ -115,7 +120,7 @@ export default function ButtonLemari() {
                     <Box className="modal-container">
                         <CloseIcon style={{ position: "absolute", top: "10px", right: "10px", cursor: "pointer", color: "grey" }} onClick={handleClose} />
                         <Typography id="spring-modal-description" sx={{ mt: 2 }}>
-                            <h6 className="text-center text-white text-2xl mb-5">Lemari</h6>
+                            <h6 className="text-center text-white text-2xl mb-5">{currentFolder}</h6>
                             <div className="h-[22rem] overflow-y-scroll overflow-y-scroll-no-thumb">
                                 {files.map((file, index) => (
                                     <div key={index} className="flex justify-between items-center px-5 py-2 mt-2" id="LayoutIsiButtonRequest">
