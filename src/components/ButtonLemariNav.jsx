@@ -7,6 +7,8 @@ import Typography from "@mui/material/Typography";
 import CloseIcon from "@mui/icons-material/Close";
 import LinearProgress from "@mui/material/LinearProgress"; // Import LinearProgress dari Material-UI
 import { getStorage, ref, listAll, getDownloadURL, getMetadata, uploadBytesResumable, createFolder } from "firebase/storage"; // Tambahkan createFolder dari firebase storage
+import IconButton from "@mui/material/IconButton";
+import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOutlined";
 
 export default function ButtonLemari() {
     const [open, setOpen] = useState(false);
@@ -15,6 +17,7 @@ export default function ButtonLemari() {
     const [currentFolder, setCurrentFolder] = useState("Lemari"); // State untuk menyimpan nama folder yang sedang dibuka
     const [newFile, setNewFile] = useState(null);
     const [newFolderName, setNewFolderName] = useState(""); // State untuk menyimpan nama folder baru
+    const [showAddFolder, setShowAddFolder] = useState(false); // State untuk menunjukkan form tambah folder baru
 
     const handleOpen = () => setOpen(true);
     const handleClose = () => {
@@ -22,6 +25,7 @@ export default function ButtonLemari() {
         // Setelah menutup modal, reset pesan sukses
         setUploadSuccess(false);
         setNewFolderName(""); // Reset input nama folder baru
+        setShowAddFolder(false); // Reset state untuk form tambah folder baru
     };
 
     const fade = useSpring({
@@ -109,6 +113,7 @@ export default function ButtonLemari() {
             await createFolder(folderRef);
             fetchFilesFromFirebase(currentFolder); // Muat ulang file setelah membuat folder baru
             setNewFolderName(""); // Reset input nama folder baru
+            setShowAddFolder(false); // Sembunyikan form tambah folder setelah berhasil
         } catch (error) {
             console.error("Error creating folder:", error);
         }
@@ -160,18 +165,27 @@ export default function ButtonLemari() {
                             {uploadProgress > 0 && <LinearProgress variant="buffer" value={uploadProgress} />}
 
                             {/* Input untuk membuat folder baru */}
-                            <div className="mt-4">
-                                <input
-                                    type="text"
-                                    value={newFolderName}
-                                    onChange={(e) => setNewFolderName(e.target.value)}
-                                    placeholder="Nama Folder Baru"
-                                    className="border rounded px-2 py-1 mr-2"
-                                />
-                                <button onClick={handleCreateFolder} className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-                                    Buat Folder
-                                </button>
-                            </div>
+                            {showAddFolder ? (
+                                <div className="mt-4 flex items-center">
+                                    <input
+                                        type="text"
+                                        value={newFolderName}
+                                        onChange={(e) => setNewFolderName(e.target.value)}
+                                        placeholder="Nama Folder Baru"
+                                        className="border rounded px-2 py-1 mr-2"
+                                    />
+                                    <button onClick={handleCreateFolder} className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                                        Buat
+                                    </button>
+                                </div>
+                            ) : (
+                                <div className="mt-4">
+                                    <IconButton onClick={() => setShowAddFolder(true)}>
+                                        <AddCircleOutlineOutlinedIcon />
+                                    </IconButton>
+                                    <span className="ml-2 text-white cursor-pointer" onClick={() => setShowAddFolder(true)}>Tambah Folder Baru</span>
+                                </div>
+                            )}
                         </Typography>
                     </Box>
                 </animated.div>
