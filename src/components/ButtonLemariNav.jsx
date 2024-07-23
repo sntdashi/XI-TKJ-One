@@ -185,5 +185,5 @@ export default function FolderButton() {
                 </animated.div>
             </Modal>
         </div>
-    );
+  );
 };
