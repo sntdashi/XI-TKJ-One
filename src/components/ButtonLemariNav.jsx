@@ -6,7 +6,14 @@ import Modal from "@mui/material/Modal";
 import Typography from "@mui/material/Typography";
 import CloseIcon from "@mui/icons-material/Close";
 import LinearProgress from "@mui/material/LinearProgress";
-import { storage as firebaseStorage, ref as storageRef, listAll as listAllFiles, getDownloadURL as getDownloadFileURL, getMetadata as getFileMetadata, uploadBytesResumable as uploadFileBytesResumable } from "firebase/storage";
+import {
+    storage as firebaseStorage,
+    ref as storageRef,
+    listAll as listAllFiles,
+    getDownloadURL as getDownloadFileURL,
+    getMetadata as getFileMetadata,
+    uploadBytesResumable as uploadFileBytesResumable
+} from "firebase/storage";
 import { db, ref as dbRef, set as dbSet, get as dbGet } from "./firebaseConfig"; // Mengimpor instance firebaseApp dan firebase database
 
 export default function FolderButton() {
@@ -17,11 +24,15 @@ export default function FolderButton() {
     const [files, setFiles] = useState([]);
     const [newFile, setNewFile] = useState(null);
     const [newFolderName, setNewFolderName] = useState("");
+    const [searchQuery, setSearchQuery] = useState("");
+    const [searchResults, setSearchResults] = useState([]);
 
     const handleOpen = () => setOpen(true);
     const handleClose = () => {
         setOpen(false);
         setUploadSuccess(false);
+        setSearchQuery(""); // Clear search query on modal close
+        setSearchResults([]); // Clear search results on modal close
     };
 
     const fade = useSpring({
@@ -51,6 +62,7 @@ export default function FolderButton() {
                     url,
                     name: metadata.name,
                     size: metadata.size,
+                    timestamp: metadata.timeCreated, // Assuming 'timeCreated' is available in metadata
                 };
             });
 
@@ -128,6 +140,11 @@ export default function FolderButton() {
         }
     };
 
+    const handleSearch = () => {
+        const results = files.filter(file => file.name.toLowerCase().includes(searchQuery.toLowerCase()));
+        setSearchResults(results);
+    };
+
     return (
         <div>
             <button onClick={handleOpen} className="text-white opacity-95 text-[1rem] font-semibold" id="FolderButton">
@@ -172,6 +189,32 @@ export default function FolderButton() {
                                     Unggah File
                                 </button>
                             </div>
+                            {/* Tombol dan input untuk pencarian file */}
+                            <div className="text-white text-[0.7rem] mt-5">
+                                <input
+                                    type="text"
+                                    value={searchQuery}
+                                    onChange={(e) => setSearchQuery(e.target.value)}
+                                    placeholder="Cari file..."
+                                />
+                                <button onClick={handleSearch} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-2">
+                                    Cari
+                                </button>
+                            </div>
+                            {/* Menampilkan hasil pencarian atau semua file */}
+                            {searchQuery ? (
+                                searchResults.map((file, index) => (
+                                    <div key={index} className="flex justify-between items-center px-5 py-2 mt-2">
+                                        <span className="text-white">{file.name}</span>
+                                    </div>
+                                ))
+                            ) : (
+                                files.map((file, index) => (
+                                    <div key={index} className="flex justify-between items-center px-5 py-2 mt-2">
+                                        <span className="text-white">{file.name}</span>
+                                    </div>
+                                ))
+                            )}
                             {/* Pesan sukses saat file berhasil diunggah */}
                             {uploadSuccess && (
                                 <Typography variant="subtitle1" className="text-green-500 mt-2">
@@ -185,5 +228,5 @@ export default function FolderButton() {
                 </animated.div>
             </Modal>
         </div>
-  );
-};
+    );
+}
