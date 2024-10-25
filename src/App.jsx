@@ -6,26 +6,7 @@ import Footer from "./Pages/Footer"
 import Chat from "./components/ChatAnonim"
 import AOS from "aos"
 import "aos/dist/aos.css"
-import React, { useState } from 'react';
-import LoginPanel from './components/LoginPanel'; // Sesuaikan dengan path yang benar
 
-const App = () => {
-    const [showLogin, setShowLogin] = useState(true);
-
-    const handleLoginSuccess = () => {
-        setShowLogin(false); // Sembunyikan panel setelah login berhasil
-    };
-
-    return (
-        <div>
-            {showLogin ? (
-                <LoginPanel onLoginSuccess={handleLoginSuccess} />
-            ) : (
-                <h2>Selamat Datang!</h2>
-            )}
-        </div>
-    );
-};
 
 function App() {
 	useEffect(() => {
