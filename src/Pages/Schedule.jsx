@@ -21,7 +21,7 @@ const Schedule = () => {
 
     // Menentukan kelompok piket berdasarkan hari
     piketGroup = [
-        ["/", "/", "/", "/", "/"],
+        ["Senin", "/", "/", "/", "/"],
         ["/", "/", "/", "/", "/"],
         ["/", "/", "/", "/", "/"],
         ["/", "/", "/", "/", "/"],
@@ -34,7 +34,7 @@ const Schedule = () => {
         Selasa,
         Rabu,
         Kamis,
-        Jumat,
+        Jumat, 
     ]
 
     // Menampilkan komponen berdasarkan hari saat ini
