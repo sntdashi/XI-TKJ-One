@@ -8,7 +8,7 @@ import { getStorage, ref, listAll, getDownloadURL } from "firebase/storage"
 import Modal from "@mui/material/Modal"
 import { Box, IconButton } from "@mui/material"
 import CloseIcon from "@mui/icons-material/Close"
-import { useSpring, animated } from "@react-spring/web" // Import the necessary components
+import { useSpring, animated } from "@react-spring/web" // Import the necessary componen
 import ButtonLemari from "../components/ButtonLemari"
 
 const Carousel = () => {
