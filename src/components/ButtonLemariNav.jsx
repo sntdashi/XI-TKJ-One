@@ -96,7 +96,7 @@ export default function ButtonLemari() {
 
     return (
         <div>
-            <button onClick={handleOpen} className="flex items-center space-x-2 text-white px-6 py-4" id="ButtonLemari">
+            <button onClick={handleOpen} className="items-center text-white px-6" id="ButtonLemari">
                 <span className="">Lemari</span>
             </button>
 
