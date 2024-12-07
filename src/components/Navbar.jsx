@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import ButtonLemariNav from "./ButtonLemari"
 
 const Navbar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
