@@ -76,8 +76,8 @@ body {
 	height: auto;
 	background: radial-gradient(
 			circle,
-			rgba(107, 201, 224, 0.852) 0%,
-			rgba(57, 198, 181, 0.905) 100%
+			rgba(224, 107, 222, 0.664) 0%,
+			rgba(57, 198, 198, 0.78) 100%
 		),
 		url("/Background.jpeg");
 	background-repeat: no-repeat;
@@ -274,12 +274,12 @@ body {
 
 #AngkaGradientPink {
 	-webkit-text-stroke: 1px #d41a773d; /* Menggunakan efek outline teks dengan warna hitam */
-	background: linear-gradient(to top right, #fab6e7, #d41a77 80%);
+	background: linear-gradient(to top right, #fab6e7, #d41a1a 80%);
 	filter: brightness(1.2);
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
-	text-shadow: #d41a77 2px 0 20px;
+	text-shadow: #d41a1a 2px 0 20px;
 }
 
 .slick-slide {
@@ -476,7 +476,7 @@ input:focus {
 #Footer {
 	background: linear-gradient(
 		to top,
-		rgba(218, 9, 229, 0.39) 5%,
+		rgba(9, 229, 196, 0.39) 5%,
 		rgba(218, 9, 229, 0.149) 55%,
 		rgba(0, 0, 0, 0)
 	);
