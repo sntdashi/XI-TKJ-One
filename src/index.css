@@ -11,8 +11,8 @@
 	--quinary-color: #ff775c;
 	--senary-color: #ff4359;
 	--septenary-color: #76ffb0;
-	--bg: #4b39c6;
-	--bg1: #e06bd5;
+	--bg: #39b3c6;
+	--bg1: #6bbde0;
 }
 
 html {
@@ -44,12 +44,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #888;
+	background-color: #d214b9;
 	border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background-color: #555;
+	background-color: #c70f93;
 }
 
 /* Untuk Firefox Browsers */
@@ -76,8 +76,8 @@ body {
 	height: auto;
 	background: radial-gradient(
 			circle,
-			rgba(224, 107, 213, 0.8520658263305322) 0%,
-			rgba(75, 57, 198, 0.9052871148459384) 100%
+			rgba(107, 201, 224, 0.852) 0%,
+			rgba(57, 198, 181, 0.905) 100%
 		),
 		url("/Background.jpeg");
 	background-repeat: no-repeat;
