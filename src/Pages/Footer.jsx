@@ -20,8 +20,8 @@ const Footer = () => {
 							<h2 class="mb-4 text-sm font-semibold uppercase text-white">CREATED BY</h2>
 							<ul class="text-gray-400 dark:text-gray-400 font-medium">
 								<li class="mb-2">
-									<a href="https://www.instagram.com/pikrievelyn/?hl=id" class="hover:underline">
-										san(Rawzn)
+									<a href="https://www.instagram.com/rawreyzn/?hl=id" class="hover:underline">
+										rawzn(san)
 									</a>
 								</li>
 							</ul>
@@ -30,7 +30,7 @@ const Footer = () => {
 							<h2 class="mb-4 text-sm font-semibold uppercase text-white ">Follow us</h2>
 							<ul class="text-gray-400 dark:text-gray-400 font-medium">
 								<li class="mb-2">
-									<a href="https://www.instagram.com/sebelastkjsatuu/?hl=id" class="hover:underline ">
+									<a href="https://www.instagram.com/duabelastkjsatuu_/?hl=id" class="hover:underline ">
 										Instagram
 									</a>
 								</li>
