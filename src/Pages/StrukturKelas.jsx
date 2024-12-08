@@ -145,41 +145,13 @@ const StrukturKelas = () => {
 				</div>
 
 				{/* Keamanan dan Kebersihan */}
-				<div className="lg:flex">
-					<img
-						src="LineHorizontal.svg"
-						alt=""
-						className="relative top-[-16.5rem]"
-						data-aos="fade-up"
-						data-aos-duration="600"
-					/>
-					<img
-						src="LineHorizontal.svg"
-						alt=""
-						className="relative top-[-16.5rem] hidden lg:flex"
-						data-aos="fade-up"
-						data-aos-duration="600"
-					/>
-					<img
-						src="LineHorizontal.svg"
-						alt=""
-						className="relative top-[-16.5rem] hidden lg:flex"
-						data-aos="fade-up"
-						data-aos-duration="600"
-					/>
-					<img
-						src="LineHorizontal.svg"
-						alt=""
-						className="relative top-[-16.5rem] hidden lg:flex"
-						data-aos="fade-up"
-						data-aos-duration="600"
-					/>
-				</div>
+				
 
 				<div
 					className=" flex gap-[5rem] relative top-[-18.5rem] lg:gap-[17.5rem]"
 					data-aos="fade-up"
 					data-aos-duration="1100">
+						
 					
 					<div className="flex-col">
 						<BorderStruktur Jabatan="Pengabsen" Nama="Putri" Width="120px" />
@@ -188,8 +160,8 @@ const StrukturKelas = () => {
 					</div>
 				</div>
 				
-				{Kesehatan}
-				<div
+				{/* Kesehatan */}
+				{/* 	<div
 					className=" absolute bottom-[14.5%] lg:hidden"
 					data-aos="fade-up"
 					data-aos-duration="1200">
@@ -202,7 +174,7 @@ const StrukturKelas = () => {
 							<BorderStruktur Jabatan="" Nama="Hendri" Width="120px" />
 						</div>
 					</div>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	)
