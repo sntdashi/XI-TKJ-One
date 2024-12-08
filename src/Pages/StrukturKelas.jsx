@@ -140,7 +140,7 @@ const StrukturKelas = () => {
 					</div>
 				</div>
 
-				<div className="relative top-[-15rem]" data-aos="fade-up" data-aos-duration="900">
+				<div className="relative top-[-12rem]" data-aos="fade-up" data-aos-duration="900">
 					<img src="LineVertikal3.svg" alt="" />
 				</div>
 
