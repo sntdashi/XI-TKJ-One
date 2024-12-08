@@ -145,7 +145,13 @@ const StrukturKelas = () => {
 				</div>
 
 				{/* Keamanan dan Kebersihan */}
-				
+				<div
+					className="flex gap-[10.6rem] relative top-[-7.2rem] lg:gap-[27.4rem]"
+					data-aos="fade-up"
+					data-aos-duration="1100">
+					<img src="Circle.svg" alt="" />
+					<img src="Circle.svg" alt="" />
+				</div>
 
 				<div
 					className=" flex gap-[5rem] relative top-[-18.5rem] lg:gap-[17.5rem]"
