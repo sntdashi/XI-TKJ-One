@@ -6,7 +6,7 @@
 :root {
 	--primary-color: #575c84;
 	--secondary-color: #686e9d;
-	--tertiary-color: #e06bd5;
+	--tertiary-color: #6be0d4;
 	--quaternary-color: #18fff3;
 	--quinary-color: #ff775c;
 	--senary-color: #ff4359;
@@ -338,7 +338,7 @@ body {
 #Mesh1 {
 	width: 100%;
 	position: absolute;
-	background-image: radial-gradient(at -66% 56.8%, hsl(292, 93%, 53%) 0px, transparent 50%);
+	background-image: radial-gradient(at -66% 56.8%, hsl(178, 93%, 53%) 0px, transparent 50%);
 	background-repeat: no-repeat, no-repeat;
 	z-index: -999;
 }
@@ -477,7 +477,7 @@ input:focus {
 	background: linear-gradient(
 		to top,
 		rgba(9, 229, 196, 0.39) 5%,
-		rgba(218, 9, 229, 0.149) 55%,
+		rgba(9, 207, 229, 0.149) 55%,
 		rgba(0, 0, 0, 0)
 	);
 }
