@@ -64,7 +64,7 @@ const StrukturKelas = () => {
 				</div>
 
 				{/* wakil dan ketua */}
-				<div className="flex relative top-[-3rem]" data-aos="fade-up" data-aos-duration="1200">
+				<div className="flex relative top-[1rem]" data-aos="fade-up" data-aos-duration="1200">
 					<div className="relative left-[0.2rem]">
 						<BorderStruktur Jabatan="Ketua Kelas" Nama="Sifa" Width="120px" />
 					</div>
