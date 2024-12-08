@@ -18,7 +18,7 @@ const StrukturKelas = () => {
 		<div className="z-1 relative h-auto lg:overflow-hidden">
 			{/* wali kelas */}
 			<div data-aos="fade-up" data-aos-duration="500" className="mt-14 md:mt-10">
-				<BorderStruktur Jabatan="Wali Kelas" Nama="Yunus Rangga Saleh S.Kom" Width="150px" />
+				<BorderStruktur Jabatan="Wali Kelas" Nama="Yunus Rangga Saleh" Width="150px" />
 			</div>
 			<div className="flex flex-col justify-center items-center">
 				<img src="LineVertikal.svg" alt="" data-aos="fade-up" data-aos-duration="550" />
@@ -174,23 +174,6 @@ const StrukturKelas = () => {
 						data-aos="fade-up"
 						data-aos-duration="600"
 					/>
-				</div>
-
-				<div
-					className="flex gap-[10.6rem] lg:gap-[23.1rem] relative top-[-17.44rem]"
-					data-aos="fade-up"
-					data-aos-duration="800">
-					<img src="LineKananKiri.svg" alt="" />
-					<img src="LineKananKiri.svg" alt="" />
-					<img src="LineKananKiri.svg" alt="" className="hidden lg:flex" />
-				</div>
-				<div
-					className="flex gap-[10.6rem] relative top-[-18.3rem] lg:gap-[23.1rem]"
-					data-aos="fade-up"
-					data-aos-duration="1000">
-					<img src="Circle.svg" alt="" />
-					<img src="Circle.svg" alt="" />
-					<img src="Circle.svg" alt="" className="hidden lg:flex" />
 				</div>
 
 				<div
