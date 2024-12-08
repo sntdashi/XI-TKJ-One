@@ -96,7 +96,7 @@ export default function ButtonLemari() {
 
     return (
         <div>
-            <button onClick={handleOpen} className="items-center text-white px-6" id="ButtonLemari">
+            <button onClick={handleOpen} className="items-center text-white px-6">
                 <span className="">Lemari</span>
             </button>
 
