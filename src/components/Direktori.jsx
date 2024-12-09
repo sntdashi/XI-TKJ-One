@@ -7,7 +7,6 @@ const quotes = [
   "We always overestimate the change that will occur in the next two years and underestimate the change that will occur in the next ten.",
   "It's fine to celebrate success, but it is more important to heed the lessons of failure.",
   "We always say we are going to be successful, but that is not the most important thing. The most important thing is to be able to contribute to society.",
-  "If you are born poor it's not your mistake, but if you die poor it's your mistake.",
 ];
 
 const Direktori = () => {
@@ -27,10 +26,10 @@ const Direktori = () => {
         <h1 
           style={{
             textAlign: 'center', 
-            color: '#4CAF50', 
+            color: '#39b3c6', 
             fontSize: '32px', 
             fontWeight: 'bold',
-            textShadow: '0 0 15px rgba(0, 255, 0, 0.7)', // Glow effect
+            textShadow: 'rgba(57, 198, 198, 0.78) 100%', // Glow effect
             marginBottom: '20px'
           }}
         >
