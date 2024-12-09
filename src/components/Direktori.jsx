@@ -22,8 +22,8 @@ const Direktori = () => {
         <h1 
           style={{
             textAlign: 'center', 
-            color: '#4CAF50', 
-            fontSize: '32px', 
+            color: '#39b3c6', 
+            fontSize: '25px', 
             fontWeight: 'bold',
             textShadow: '0 0 15px rgba(57, 198, 198, 0.78)', // Glow effect
             marginBottom: '20px'
