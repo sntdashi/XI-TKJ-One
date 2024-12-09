@@ -1,13 +1,12 @@
 import React, { useEffect } from "react"
 import Home from "./Pages/Home"
 import Carousel from "./Pages/Gallery"
-import Direktori from './Direktori';
+import Direktori from './Direktori';  // Impor komponen Direktori
 import FullWidthTabs from "./Pages/Tabs"
 import Footer from "./Pages/Footer"
 import Chat from "./components/ChatAnonim"
 import AOS from "aos"
 import "aos/dist/aos.css"
-
 
 function App() {
 	useEffect(() => {
@@ -18,12 +17,15 @@ function App() {
 	return (
 		<>
 			<Home />
-
 			<Carousel />
 			<FullWidthTabs />
 
-			<div id="Mesh1"></div>
+			{/* Tempatkan komponen Direktori di sini */}
+			<div id="direktori-section" data-aos="fade-up" data-aos-duration="1200">
+				<Direktori />  {/* Menampilkan komponen Direktori */}
+			</div>
 
+			<div id="Mesh1"></div>
 
 			<div
 				className="lg:mx-[12%] lg:mt-[-5rem] lg:mb-20 hidden lg:block"
