@@ -26,10 +26,10 @@ const Direktori = () => {
         <h1 
           style={{
             textAlign: 'center', 
-            color: '#39b3c6', 
+            color: '#4CAF50', 
             fontSize: '32px', 
             fontWeight: 'bold',
-            textShadow: 'rgba(57, 198, 198, 0.78) 100%', // Glow effect
+            textShadow: '0 0 15px rgba(57, 198, 198, 0.78)', // Glow effect
             marginBottom: '20px'
           }}
         >
@@ -45,17 +45,17 @@ const Direktori = () => {
                 backgroundColor: 'rgba(255, 255, 255, 0.8)', 
                 borderRadius: '10px',
                 padding: '15px', 
-                marginBottom: '15px',
+                marginBottom: '20px',
                 boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
               }}
             >
               <p 
                 style={{
-                  color: '#333',
+                  color: '#4CAF50',
                   fontSize: '18px',
                   fontStyle: 'italic',
                   textAlign: 'center',
-                  textShadow: '0 0 10px rgba(0, 255, 0, 0.7)', // Glow effect
+                  textShadow: '0 0 10px rgba(57, 198, 198, 0.78', // Glow effect
                 }}
               >
                 "{quote}"
