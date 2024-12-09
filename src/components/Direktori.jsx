@@ -12,7 +12,7 @@ const quotes = [
 
 const Direktori = () => {
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#f0f0f0', padding: '20px' }}>
+    <div style={{ minHeight: '100vh', padding: '20px' }}>
       <div
         style={{
           background: 'rgba(255, 255, 255, 0.5)', 
@@ -34,7 +34,7 @@ const Direktori = () => {
             marginBottom: '20px'
           }}
         >
-          Kata-kata Motivasi dari Bill Gates
+            Quots
         </h1>
         
         {/* Menampilkan daftar kata-kata motivasi */}
