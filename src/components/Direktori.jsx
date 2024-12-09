@@ -1,158 +1,69 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-// Contoh data folder dan file
-const dataDirektori = [
-  {
-    nama: 'Folder 1',
-    type: 'folder',
-    konten: [
-      { nama: 'File1.txt', type: 'file' },
-      { nama: 'File2.txt', type: 'file' },
-    ],
-  },
-  {
-    nama: 'Folder 2',
-    type: 'folder',
-    konten: [
-      { nama: 'FileA.txt', type: 'file' },
-      { nama: 'FileB.txt', type: 'file' },
-    ],
-  },
+// Daftar kata-kata motivasi dari Bill Gates
+const quotes = [
+  "Don't compare yourself with anyone in this world. If you do so, you are insulting yourself.",
+  "Your most unhappy customers are your greatest source of learning.",
+  "We always overestimate the change that will occur in the next two years and underestimate the change that will occur in the next ten.",
+  "It's fine to celebrate success, but it is more important to heed the lessons of failure.",
+  "We always say we are going to be successful, but that is not the most important thing. The most important thing is to be able to contribute to society.",
+  "If you are born poor it's not your mistake, but if you die poor it's your mistake.",
 ];
 
 const Direktori = () => {
-  const [direktori, setDirektori] = useState(dataDirektori);
-  const [newFolderName, setNewFolderName] = useState('');
-  const [newFileName, setNewFileName] = useState('');
-  const [editingFolderIndex, setEditingFolderIndex] = useState(null);
-
-  // Menangani klik folder untuk expand
-  const handleClick = (folderIndex) => {
-    const newDirektori = [...direktori];
-    newDirektori[folderIndex].konten = newDirektori[folderIndex].konten || [];
-    setDirektori(newDirektori);
-  };
-
-  // Menambahkan folder baru
-  const addFolder = () => {
-    if (newFolderName) {
-      const newDirektori = [
-        ...direktori,
-        { nama: newFolderName, type: 'folder', konten: [] },
-      ];
-      setDirektori(newDirektori);
-      setNewFolderName('');
-    }
-  };
-
-  // Mengedit nama folder
-  const editFolder = (folderIndex) => {
-    const updatedDirektori = [...direktori];
-    updatedDirektori[folderIndex].nama = newFolderName;
-    setDirektori(updatedDirektori);
-    setNewFolderName('');
-    setEditingFolderIndex(null);
-  };
-
-  // Menambahkan file ke folder tertentu
-  const addFileToFolder = (folderIndex) => {
-    if (newFileName) {
-      const updatedDirektori = [...direktori];
-      updatedDirektori[folderIndex].konten.push({
-        nama: newFileName,
-        type: 'file',
-      });
-      setDirektori(updatedDirektori);
-      setNewFileName('');
-    }
-  };
-
-  // Menghapus folder
-  const deleteFolder = (folderIndex) => {
-    const updatedDirektori = [...direktori];
-    updatedDirektori.splice(folderIndex, 1);
-    setDirektori(updatedDirektori);
-  };
-
-  // Menghapus file
-  const deleteFile = (folderIndex, fileIndex) => {
-    const updatedDirektori = [...direktori];
-    updatedDirektori[folderIndex].konten.splice(fileIndex, 1);
-    setDirektori(updatedDirektori);
-  };
-
   return (
-    <div>
-      <h1>Direktori</h1>
-
-      {/* Input untuk menambahkan folder baru */}
-      <div>
-        <input
-          type="text"
-          value={newFolderName}
-          onChange={(e) => setNewFolderName(e.target.value)}
-          placeholder="Nama Folder Baru"
-        />
-        <button onClick={addFolder}>Tambah Folder</button>
-      </div>
-
-      {/* Input untuk menambahkan file baru */}
-      {editingFolderIndex !== null && (
+    <div style={{ minHeight: '100vh', backgroundColor: '#f0f0f0', padding: '20px' }}>
+      <div
+        style={{
+          background: 'rgba(255, 255, 255, 0.5)', 
+          backdropFilter: 'blur(10px)', 
+          borderRadius: '15px', 
+          padding: '20px',
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+          maxWidth: '600px', 
+          margin: '0 auto',
+        }}
+      >
+        <h1 
+          style={{
+            textAlign: 'center', 
+            color: '#4CAF50', 
+            fontSize: '32px', 
+            fontWeight: 'bold',
+            textShadow: '0 0 15px rgba(0, 255, 0, 0.7)', // Glow effect
+            marginBottom: '20px'
+          }}
+        >
+          Kata-kata Motivasi dari Bill Gates
+        </h1>
+        
+        {/* Menampilkan daftar kata-kata motivasi */}
         <div>
-          <input
-            type="text"
-            value={newFileName}
-            onChange={(e) => setNewFileName(e.target.value)}
-            placeholder="Nama File Baru"
-          />
-          <button onClick={() => addFileToFolder(editingFolderIndex)}>
-            Tambah File
-          </button>
-        </div>
-      )}
-
-      {/* Menampilkan direktori */}
-      <div>
-        {direktori.map((folder, index) => (
-          <div key={index} style={{ marginBottom: '20px' }}>
-            {/* Nama Folder, dengan fitur edit dan hapus */}
-            <div>
-              {editingFolderIndex === index ? (
-                <div>
-                  <input
-                    type="text"
-                    value={newFolderName}
-                    onChange={(e) => setNewFolderName(e.target.value)}
-                  />
-                  <button onClick={() => editFolder(index)}>Simpan</button>
-                </div>
-              ) : (
-                <div>
-                  <strong>{folder.nama}</strong> (Folder)
-                  <button onClick={() => setEditingFolderIndex(index)}>
-                    Edit
-                  </button>
-                  <button onClick={() => deleteFolder(index)}>Hapus</button>
-                  <button onClick={() => handleClick(index)}>Expand</button>
-                </div>
-              )}
+          {quotes.map((quote, index) => (
+            <div 
+              key={index}
+              style={{
+                backgroundColor: 'rgba(255, 255, 255, 0.8)', 
+                borderRadius: '10px',
+                padding: '15px', 
+                marginBottom: '15px',
+                boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+              }}
+            >
+              <p 
+                style={{
+                  color: '#333',
+                  fontSize: '18px',
+                  fontStyle: 'italic',
+                  textAlign: 'center',
+                  textShadow: '0 0 10px rgba(0, 255, 0, 0.7)', // Glow effect
+                }}
+              >
+                "{quote}"
+              </p>
             </div>
-
-            {/* Menampilkan konten folder (file) */}
-            {folder.konten && (
-              <div style={{ marginLeft: '20px' }}>
-                {folder.konten.map((file, fileIndex) => (
-                  <div key={fileIndex}>
-                    {file.nama} (File)
-                    <button onClick={() => deleteFile(index, fileIndex)}>
-                      Hapus
-                    </button>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
