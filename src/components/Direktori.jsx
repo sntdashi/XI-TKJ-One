@@ -3,15 +3,11 @@ import React from 'react';
 // Daftar kata-kata motivasi dari Bill Gates
 const quotes = [
   "Don't compare yourself with anyone in this world. If you do so, you are insulting yourself.",
-  "Your most unhappy customers are your greatest source of learning.",
-  "We always overestimate the change that will occur in the next two years and underestimate the change that will occur in the next ten.",
-  "It's fine to celebrate success, but it is more important to heed the lessons of failure.",
-  "We always say we are going to be successful, but that is not the most important thing. The most important thing is to be able to contribute to society.",
 ];
 
 const Direktori = () => {
   return (
-    <div style={{ minHeight: '100vh', padding: '20px' }}>
+    <div style={{ minHeight: '100vh', padding: '25px' }}>
       <div
         style={{
           background: 'rgba(255, 255, 255, 0.5)', 
