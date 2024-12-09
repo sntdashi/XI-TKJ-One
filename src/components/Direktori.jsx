@@ -7,7 +7,7 @@ const quotes = [
 
 const Direktori = () => {
   return (
-    <div style={{ minHeight: '100vh', padding: '25px' }}>
+    <div style={{ minHeight: '100vh', padding: '20px' }}>
       <div
         style={{
           background: 'rgba(255, 255, 255, 0.5)', 
