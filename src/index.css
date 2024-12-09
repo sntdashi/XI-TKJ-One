@@ -79,7 +79,7 @@ body {
 			rgba(224, 107, 222, 0.71) 0%,
 			rgba(57, 198, 198, 0.891) 100%
 		),
-		url("/Background.jpeg");
+		url("/kereta.gif");
 	background-repeat: no-repeat;
 	background-size: cover; /* Atau gunakan 'contain' sesuai kebutuhan */
 	background-position: center;
