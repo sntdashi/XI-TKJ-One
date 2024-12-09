@@ -4,12 +4,12 @@
 @tailwind utilities;
 
 :root {
-	--primary-color: #575c84;
-	--secondary-color: #686e9d;
+	--primary-color: #578465;
+	--secondary-color: #689d9a;
 	--tertiary-color: #6be0d4;
 	--quaternary-color: #18fff3;
-	--quinary-color: #ff775c;
-	--senary-color: #ff4359;
+	--quinary-color: #5cffd1;
+	--senary-color: #43ffd9;
 	--septenary-color: #76ffb0;
 	--bg: #39b3c6;
 	--bg1: #6bbde0;
@@ -44,12 +44,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #d214b9;
+	background-color: #14d2cf5c;
 	border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background-color: #c70f93;
+	background-color: #0fc79660;
 }
 
 /* Untuk Firefox Browsers */
@@ -76,8 +76,8 @@ body {
 	height: auto;
 	background: radial-gradient(
 			circle,
-			rgba(224, 107, 222, 0.664) 0%,
-			rgba(57, 198, 198, 0.78) 100%
+			rgba(224, 107, 222, 0.71) 0%,
+			rgba(57, 198, 198, 0.891) 100%
 		),
 		url("/Background.jpeg");
 	background-repeat: no-repeat;
@@ -351,7 +351,7 @@ body {
 
 
 #Tabs {
-	background-image: radial-gradient(at 122.3% 55.5%, hsla(292, 93%, 53%, 0.492) 0px, transparent 50%),
+	background-image: radial-gradient(at 122.3% 55.5%, hsla(194, 93%, 53%, 0.492) 0px, transparent 50%),
 		radial-gradient(at 81.4% 65.2%, hsl(0, 0%, 12%) 0px, transparent 50%);
 }
 
