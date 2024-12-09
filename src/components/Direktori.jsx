@@ -2,7 +2,7 @@ import React from 'react';
 
 // Daftar kata-kata motivasi dari Bill Gates
 const quotes = [
-  "Don't compare yourself with anyone in this world. If you do so, you are insulting yourself.",
+  "semoga, semoga dirimu menemukan seseorang yang berbicara dalam bahasamu, sehingga kamu tidak perlu menghabiskan seumur hidup untuk menerjemahkan jiwamu.",
 ];
 
 const Direktori = () => {
@@ -13,7 +13,7 @@ const Direktori = () => {
           background: 'rgba(255, 255, 255, 0.5)', 
           backdropFilter: 'blur(10px)', 
           borderRadius: '15px', 
-          padding: '20px',
+          padding: '15px',
           boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
           maxWidth: '600px', 
           margin: '0 auto',
@@ -47,7 +47,7 @@ const Direktori = () => {
             >
               <p 
                 style={{
-                  color: '#4CAF50',
+                  color: '#39b3c6',
                   fontSize: '18px',
                   fontStyle: 'italic',
                   textAlign: 'center',
