@@ -21,7 +21,7 @@ const Footer = () => {
 							<ul class="text-gray-400 dark:text-gray-400 font-medium">
 								<li class="mb-2">
 									<a href="https://www.instagram.com/rawreyzn/?hl=id" class="hover:underline">
-										rawzn(san)
+										IG: rawzn(san)
 									</a>
 								</li>
 							</ul>
@@ -55,7 +55,7 @@ const Footer = () => {
 				<div class="sm:flex sm:items-center sm:justify-between">
 					<div class="flex mt-4 justify-center sm:mt-0">
 						<p className="text-[0.7rem] text-white opacity-70">
-							© {new Date().getFullYear()} Copyright | XII TKJ One
+							© {new Date().getFullYear()} Copyright | XII TKJ One Nevers Die
 						</p>
 					</div>
 				</div>
