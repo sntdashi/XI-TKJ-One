@@ -81,7 +81,7 @@ body {
 		),
 		url("/Ungu.gif");
 	background-repeat: no-repeat;
-	background-size: contain; /* Atau gunakan 'contain' sesuai kebutuhan */
+	background-size: cover; /* Atau gunakan 'contain' sesuai kebutuhan */
 	background-position: center;
 	z-index: 10;
 }
