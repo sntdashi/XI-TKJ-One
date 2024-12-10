@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import Home from "./Pages/Home"
 import Carousel from "./Pages/Gallery"
-import Direktori from "./components/Direktori"  // Impor komponen Direktori
+import Direktori from "./Pages/Direktori" 
 import FullWidthTabs from "./Pages/Tabs"
 import Footer from "./Pages/Footer"
 import Chat from "./components/ChatAnonim"
