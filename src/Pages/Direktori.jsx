@@ -12,8 +12,9 @@ const Direktori = () => {
     <div style={{ minHeight: '100vh', padding: '20px' }}>
       <div
         style={{
-          background: 'rgba(255, 255, 255, 0.5)', 
-          backdropFilter: 'blur(5px)', 
+          background: 'rgba(255, 255, 255, 0.14)', 
+          backdropFilter: 'blur(6.9px)', 
+          webkitbackdropfilter: 'blur(6.9px)',
           borderRadius: '15px', 
           padding: '15px',
           boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
